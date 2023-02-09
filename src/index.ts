@@ -8,6 +8,7 @@ const typeDefs = `#graphql
   
   type Query {
     products: [Product]
+    hello: String
   }
 
   type Product{
@@ -25,6 +26,7 @@ const typeDefs = `#graphql
   const resolvers = {
     Query: {
       products: () =>products,
+      hello: ()=> "Hello, GraphQL"
     },
   };
 
